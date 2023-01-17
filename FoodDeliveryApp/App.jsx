@@ -9,7 +9,12 @@ const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Text>Hello, world!</Text>
+      <Text
+        style={{
+          fontSize: 30,
+        }}>
+        Hello, there!
+      </Text>
     </View>
   );
 };
