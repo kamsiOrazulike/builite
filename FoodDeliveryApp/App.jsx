@@ -1,10 +1,10 @@
 import React from 'react';
-import Home from './src/components/loginPage';
+import LoginPage from './src/components/loginPage';
 
 const App = () => {
   return (
     <>
-      <Home />
+      <LoginPage />
     </>
   );
 };

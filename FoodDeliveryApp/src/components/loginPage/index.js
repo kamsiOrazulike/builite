@@ -1,6 +1,37 @@
 import React from 'react';
+import SigninOptions from './loginButtonStyles';
 import Logo from '../../../assets/images/GLogo.png';
-import {StyleSheet, Text, View, Image, Button, Alert} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Alert,
+  Pressable,
+} from 'react-native';
+
+const loginPage = () => {
+  return (
+    <>
+      <View style={styles.wrapper}>
+        <View style={styles.container}>
+          <View style={styles.div}>
+            <Image style={styles.logo} source={Logo}></Image>
+            <Text style={styles.h4}> Are you a GO Genesis member yet? </Text>
+            <Pressable
+              onPress={() => Alert.alert('Become member button clicked!')}
+              style={styles.button}>
+              <Text style={styles.buttontxt}> Become a member </Text>
+            </Pressable>
+          </View>
+          <View style={styles.div}>
+            < SigninOptions />
+          </View>
+        </View>
+      </View>
+    </>
+  );
+};
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -23,10 +54,11 @@ const styles = StyleSheet.create({
 
   div: {
     display: 'flex',
+    marginVertical: 48,
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-between',
-    // backgroundColor: '#FFFFFF50',
+    // backgroundColor: '#FF00FF40',
   },
 
   logo: {
@@ -40,8 +72,18 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    color: "#000000",
-    backgroundColor: "#E2D7AE",
+    marginTop: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 8,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    elevation: 3,
+    backgroundColor: '#E2D7AE',
+  },
+
+  buttontxt: {
+    color: '#000',
   },
 
   h1: {
@@ -63,26 +105,5 @@ const styles = StyleSheet.create({
     // backgroundColor: '#FF000050',
   },
 });
-
-const loginPage = () => {
-  return (
-    <>
-      <View style={styles.wrapper}>
-        <View style={styles.container}>
-          <View style={styles.div}>
-            <Image style={styles.logo} source={Logo}></Image>
-            <Text style={styles.h4}> Are you a GO Genesis member yet? </Text>
-            <Button
-              onPress={() => Alert.alert('Become member clicked!')}
-              title="Become a member"
-              style={styles.button}
-              accessibilityLabel="Learn more about this purple button"
-            />
-          </View>
-        </View>
-      </View>
-    </>
-  );
-};
 
 export default loginPage;
