@@ -1,14 +1,7 @@
 import React from 'react';
 import SigninOptions from './loginButtonStyles';
 import Logo from '../../../assets/images/GLogo.png';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Alert,
-  Pressable,
-} from 'react-native';
+import {StyleSheet, Text, View, Image, Alert, Pressable} from 'react-native';
 
 const loginPage = () => {
   return (
@@ -25,7 +18,7 @@ const loginPage = () => {
             </Pressable>
           </View>
           <View style={styles.div}>
-            < SigninOptions />
+            <SigninOptions />
           </View>
         </View>
       </View>
