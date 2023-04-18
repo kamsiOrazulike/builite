@@ -9,7 +9,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Builite",
+  title: "Builite Services",
   description: "Project phase I",
 };
 
