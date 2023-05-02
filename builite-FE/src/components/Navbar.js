@@ -20,12 +20,12 @@ export default function Navbar() {
       </ul>
 
       <div onClick={handleNav} className="block md:hidden z-20 fixed right-4">
-        {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} />}
       </div>
       <div
         className={
-          !nav
-            ? "flex flex-col fixed left-0 top-0 w-full h-full border-r border-r-gray-900 bg-[#030200] transition-all ease-in-out duration-300"
+          nav
+            ? "flex flex-col fixed left-0 top-0 w-full h-full border-r border-r-gray-900 bg-[#033059] transition-all ease-in-out duration-300"
             : "fixed top-[-500em]"
         }
       >
