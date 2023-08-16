@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaUserCircle } from "react-icons/fa";
-import Button from "../Buttons/Buttons";
+import Button from "../Buttons/AllButtons";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex fixed w-screen justify-between items-center h-28 max-w-[1840px] mx-auto px-4 text-blue-900 bg-white">
+    <div className="z-50 flex fixed w-screen justify-between items-center h-28 max-w-[1840px] mx-auto px-4 text-blue-900 bg-white shadow-md">
       <div className="w-full flex flex-row justify-between items-center">
         <ul className="hidden md:flex">
           <li className="p-4">Buy</li>
@@ -48,8 +48,14 @@ export default function Navbar() {
 
         <ul className="flex flex-col pt-14 uppercase p-4 align-middle">
           <li className="p-4 border-b border-gray-600">Projects</li>
-          <li className="p-4 border-b border-gray-600">Services</li>
-          <li className="p-4 border-b border-gray-600">About Us</li>
+          <li className="p-4 border-b border-gray-600">Buy</li>
+          <li className="p-4 border-b border-gray-600">Sell</li>
+          <li className="p-4 border-b border-gray-600">Rent</li>
+          <li className="p-4 border-b border-gray-600">Build</li>
+          <li className="p-4 border-b border-gray-600">Agent Finder</li>
+          <li className="p-4 border-b border-gray-600">Manage Rentals</li>
+          <li className="p-4 border-b border-gray-600">Loans</li>
+          <li className="p-4 border-b">About Us</li>
         </ul>
 
         <ul className="flex flex-col pt-24 uppercase p-4 align-middle">
