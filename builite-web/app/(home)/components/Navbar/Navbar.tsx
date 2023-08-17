@@ -1,12 +1,42 @@
 "use client";
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { FaUserCircle } from "react-icons/fa";
+import { FaTable, FaTv, FaUserCircle, FaUsers } from "react-icons/fa";
 import Button from "../Buttons/AllButtons";
 import { NavLink, NavButton } from "./NavLinks";
+import { NavDropdown } from "../Dropdowns/Dropdown";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
+  const navOptions = [
+    {
+      id: 1,
+      label: "Option 1",
+      icon: <FaTable />,
+      action: () => {
+        // Handle option 1 click
+        console.log("Option 1 clicked");
+      },
+    },
+    {
+      id: 2,
+      label: "Option 2",
+      icon: <FaTv />,
+      action: () => {
+        // Handle option 2 click
+        console.log("Option 2 clicked");
+      },
+    },
+    {
+      id: 3,
+      label: "Option 3",
+      icon: <FaUsers />,
+      action: () => {
+        // Handle option 3 click
+        console.log("Option 3 clicked");
+      },
+    },
+  ];
 
   const handleNav = () => {
     setNav(!nav);
@@ -16,19 +46,19 @@ export default function Navbar() {
     <div className="z-50 flex fixed w-screen justify-between items-center h-28 max-w-[1840px] mx-auto px-4 text-blue-900 bg-white shadow-md">
       <div className="w-full flex flex-row justify-between items-center align-middle">
         <ul className="hidden md:flex">
-          <li className="p-4">
+          <li className="p-2 m-2">
             <NavLink label="Buy" href={"#"} />
           </li>
-          <li className="p-4">
+          <li className="p-2 m-2">
             <NavLink label="Sell" href={"#"} />
           </li>
-          <li className="p-4">
+          <li className="p-2 m-2">
             <NavLink label="Rent" href={"#"} />
           </li>
-          <li className="p-4">
-            <NavLink label="Build" href={"#"} />
+          <li className="p-2 m-2">
+            <NavDropdown label="Build" options={navOptions} />
           </li>
-          <li className="p-4">
+          <li className="p-2 m-2">
             <NavLink label="Agent Finder" href={"#"} />
           </li>
         </ul>
@@ -36,13 +66,13 @@ export default function Navbar() {
           <img src={"./assets/imgs/logolight.svg"} className={"w-40"} />
         </div>
         <ul className="hidden md:flex">
-          <li className="p-4">
+          <li className="p-2 m-2">
             <NavLink label="Manage Rentals" href={"#"} />
           </li>
-          <li className="p-4">
+          <li className="p-2 m-2">
             <NavLink label="About Us" href={"#"} />
           </li>
-          <li className="p-4">
+          <li className="p-2 m-2">
             <NavButton label="Sign in" href={"#"} icon={<FaUserCircle />} />
           </li>
         </ul>

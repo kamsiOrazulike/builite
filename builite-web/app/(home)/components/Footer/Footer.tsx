@@ -3,6 +3,9 @@ import { FooterLink } from "./FooterLink";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
+  const currentDate = new Date();
+  const currentMonth = currentDate.toLocaleString("default", { month: "long" });
+
   return (
     <>
       <footer className="bg-white">
@@ -14,24 +17,16 @@ const Footer = () => {
               <h2 className="mb-6 text-xl text-black">Join Us</h2>
               <ul className="text-gray-800 font-light">
                 <li className="mb-4">
-                  <a href="#" className=" hover:underline">
-                    <FooterLink label="Become an Agent" href="#" />
-                  </a>
+                  <FooterLink label="Become an Agent" href="#" />
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    <FooterLink label="Get Referrals" href="#" />
-                  </a>
+                  <FooterLink label="Get Referrals" href="#" />
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    <FooterLink label="Careers" href="#" />
-                  </a>
+                  <FooterLink label="Careers" href="#" />
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    <FooterLink label="Find Homes faster" href="#" />
-                  </a>
+                  <FooterLink label="Find Homes faster" href="#" />
                 </li>
               </ul>
             </div>
@@ -139,7 +134,29 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="px-4 py-6 bg-white md:flex md:items-center md:justify-between"></div>
+          <div className="px-4 py-6 bg-gray-100 text-gray-700 flex flex-col items-start justify-start">
+            <img src={"./assets/imgs/logolight.svg"} className={"w-40 mb-8"} />
+            <p className="text-lg">
+              Copyright: © 2023 Builite. All rights reserved.
+            </p>
+            <p className="text-lg my-2">
+              Updated {currentMonth} {currentDate.getFullYear()}: By searching,
+              you agree to the Terms of Use, and Privacy Policy.
+            </p>
+            <p className="text-lg my-2">
+              Do not sell or share any personal information.
+            </p>
+            <p className="text-lg mb-2">
+              BUILITE and all BUILITE variants, TITLE FORWARD, WALK SCORE, and
+              the R logos, are trademarks of Builite Corporation, registered or
+              pending in the USPTO.
+            </p>
+            <p className="text-lg mt-2">
+              If you are using a screen reader, or having trouble viewing this
+              website, please call Builite Customer Support for help at
+              +2348037245500
+            </p>
+          </div>
         </div>
       </footer>
     </>
