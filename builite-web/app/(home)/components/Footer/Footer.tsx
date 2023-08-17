@@ -32,36 +32,6 @@ const Footer = () => {
             </div>
             {/* Column 2 */}
             <div>
-              <h2 className="mb-6 text-xl text-black">About Us</h2>
-              <ul className="text-gray-800 font-light">
-                <li className="mb-4">
-                  <FooterLink label="Why Builite?" href="#" />
-                </li>
-                <li className="mb-4">
-                  <FooterLink label="Community Impact" href="#" />
-                </li>
-                <li className="mb-4">
-                  <FooterLink label="Diversity & Inclusion" href="#" />
-                </li>
-                <li className="mb-4">
-                  <FooterLink label="Life at Builite" href="#" />
-                </li>
-                <li className="mb-4">
-                  <FooterLink label="Press" href="#" />
-                </li>
-                <li className="mb-4">
-                  <FooterLink label="Investors" href="#" />
-                </li>
-                <li className="mb-4">
-                  <FooterLink label="Blog" href="#" />
-                </li>
-                <li className="mb-4">
-                  <FooterLink label="Real Estate News" href="#" />
-                </li>
-              </ul>
-            </div>
-            {/* Column 3 */}
-            <div>
               <h2 className="mb-6 text-xl text-black">Find Us</h2>
               <ul className="text-gray-800 font-medium">
                 <li className="mb-4">
@@ -129,6 +99,36 @@ const Footer = () => {
               <ul className="text-gray-800 font-medium">
                 <li className="mb-4">
                   <FooterLink label="Nigeria" href="#" />
+                </li>
+              </ul>
+            </div>
+            {/* Column 3 */}
+            <div>
+              <h2 className="mb-6 text-xl text-black">About Us</h2>
+              <ul className="text-gray-800 font-light">
+                <li className="mb-4">
+                  <FooterLink label="Why Builite?" href="#" />
+                </li>
+                <li className="mb-4">
+                  <FooterLink label="Community Impact" href="#" />
+                </li>
+                <li className="mb-4">
+                  <FooterLink label="Diversity & Inclusion" href="#" />
+                </li>
+                <li className="mb-4">
+                  <FooterLink label="Life at Builite" href="#" />
+                </li>
+                <li className="mb-4">
+                  <FooterLink label="Press" href="#" />
+                </li>
+                <li className="mb-4">
+                  <FooterLink label="Investors" href="#" />
+                </li>
+                <li className="mb-4">
+                  <FooterLink label="Blog" href="#" />
+                </li>
+                <li className="mb-4">
+                  <FooterLink label="Real Estate News" href="#" />
                 </li>
               </ul>
             </div>
