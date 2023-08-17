@@ -20,12 +20,12 @@ export const CardWithLink: React.FC<CardProps> = ({
   className,
 }) => {
   return (
-    <div className="w-full flex flex-col justify-between bg-white border border-gray-200 shadow-md m-4 rounded-lg text-left hover:scale-[1.05] transition-all duration-150">
+    <div className="w-full flex flex-col justify-between bg-white border border-gray-200 shadow-md m-4 rounded-lg text-left">
       <div className="p-2 mb-3">
         <img
           src={thumbnail}
           alt={title}
-          className="rounded-md h-60 w-full object-cover"
+          className="rounded-md h-60 w-full object-cover hover:scale-[1.02] transition-all duration-150"
         />
       </div>
       <div className="flex flex-col items-start py-8 px-4">

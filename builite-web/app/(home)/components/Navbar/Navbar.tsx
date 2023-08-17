@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaUserCircle } from "react-icons/fa";
 import Button from "../Buttons/AllButtons";
+import { NavLink, NavButton } from "./NavLinks";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -13,23 +14,36 @@ export default function Navbar() {
 
   return (
     <div className="z-50 flex fixed w-screen justify-between items-center h-28 max-w-[1840px] mx-auto px-4 text-blue-900 bg-white shadow-md">
-      <div className="w-full flex flex-row justify-between items-center">
+      <div className="w-full flex flex-row justify-between items-center align-middle">
         <ul className="hidden md:flex">
-          <li className="p-4">Buy</li>
-          <li className="p-4">Sell</li>
-          <li className="p-4">Rent</li>
-          <li className="p-4">Build</li>
-          <li className="p-4">Agent Finder</li>
+          <li className="p-4">
+            <NavLink label="Buy" href={"/to-buy"} />
+          </li>
+          <li className="p-4">
+            <NavLink label="Sell" href={"/to-sell"} />
+          </li>
+          <li className="p-4">
+            <NavLink label="Rent" href={"/to-rent"} />
+          </li>
+          <li className="p-4">
+            <NavLink label="Build" href={"/to-build"} />
+          </li>
+          <li className="p-4">
+            <NavLink label="Agent Finder" href={"/agent-finder"} />
+          </li>
         </ul>
         <div>
           <img src={"./assets/imgs/logolight.svg"} className={"w-40"} />
         </div>
         <ul className="hidden md:flex">
-          <li className="p-4">Manage Rentals</li>
-          <li className="p-4">Loans</li>
-          <li className="p-4">About Us</li>
           <li className="p-4">
-            {/* <Button label={"Sign in"} link={"/login"} icon={<FaUserCircle />} /> */}
+            <NavLink label="Manage Rentals" href={"#"} />
+          </li>
+          <li className="p-4">
+            <NavLink label="About Us" href={"#"} />
+          </li>
+          <li className="p-4">
+            <NavButton label="Sign in" href={"#"} icon={<FaUserCircle />} />
           </li>
         </ul>
       </div>

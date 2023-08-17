@@ -1,7 +1,12 @@
+"use client";
 import { Searchbar } from "./components/Searchbar/Searchbar";
-import { DiscoverSection } from "./components/Sections/AllSections";
+import { CTASection, DiscoverSection } from "./components/Sections/AllSections";
 
 export default function Home() {
+  function handleSearch(value: any) {
+    console.log("You searched: ", value);
+  }
+
   return (
     <>
       <div className="text-white bg-placeHolder bg-fixed bg-cover">
@@ -15,11 +20,16 @@ export default function Home() {
               Let's get you a home perfect for you
             </p>
             <div className="mt-2 w-[90%]">
-              <Searchbar />
+              <Searchbar
+                label="Address, School, City, Neighbourhood"
+                htmlFor="departmentID"
+                handleSearch={handleSearch}
+              />
             </div>
           </div>
         </div>
         <DiscoverSection />
+        <CTASection />
       </div>
     </>
   );
