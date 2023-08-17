@@ -17,19 +17,19 @@ export default function Navbar() {
       <div className="w-full flex flex-row justify-between items-center align-middle">
         <ul className="hidden md:flex">
           <li className="p-4">
-            <NavLink label="Buy" href={"/to-buy"} />
+            <NavLink label="Buy" href={"#"} />
           </li>
           <li className="p-4">
-            <NavLink label="Sell" href={"/to-sell"} />
+            <NavLink label="Sell" href={"#"} />
           </li>
           <li className="p-4">
-            <NavLink label="Rent" href={"/to-rent"} />
+            <NavLink label="Rent" href={"#"} />
           </li>
           <li className="p-4">
-            <NavLink label="Build" href={"/to-build"} />
+            <NavLink label="Build" href={"#"} />
           </li>
           <li className="p-4">
-            <NavLink label="Agent Finder" href={"/agent-finder"} />
+            <NavLink label="Agent Finder" href={"#"} />
           </li>
         </ul>
         <div>
