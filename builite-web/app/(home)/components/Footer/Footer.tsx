@@ -14,24 +14,6 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-8 px-24 py-8 md:grid-cols-4">
             {/* Column 1 */}
             <div>
-              <h2 className="mb-6 text-xl text-black">Join Us</h2>
-              <ul className="text-gray-800 font-light">
-                <li className="mb-4">
-                  <FooterLink label="Become an Agent" href="#" />
-                </li>
-                <li className="mb-4">
-                  <FooterLink label="Get Referrals" href="#" />
-                </li>
-                <li className="mb-4">
-                  <FooterLink label="Careers" href="#" />
-                </li>
-                <li className="mb-4">
-                  <FooterLink label="Find Homes faster" href="#" />
-                </li>
-              </ul>
-            </div>
-            {/* Column 2 */}
-            <div>
               <h2 className="mb-6 text-xl text-black">Find Us</h2>
               <ul className="text-gray-800 font-medium">
                 <li className="mb-4">
@@ -102,7 +84,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            {/* Column 3 */}
+            {/* Column 2 */}
             <div>
               <h2 className="mb-6 text-xl text-black">About Us</h2>
               <ul className="text-gray-800 font-light">
@@ -129,6 +111,24 @@ const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <FooterLink label="Real Estate News" href="#" />
+                </li>
+              </ul>
+            </div>
+            {/* Column 3 */}
+            <div>
+              <h2 className="mb-6 text-xl text-black">Join Us</h2>
+              <ul className="text-gray-800 font-light">
+                <li className="mb-4">
+                  <FooterLink label="Become an Agent" href="#" />
+                </li>
+                <li className="mb-4">
+                  <FooterLink label="Get Referrals" href="#" />
+                </li>
+                <li className="mb-4">
+                  <FooterLink label="Careers" href="#" />
+                </li>
+                <li className="mb-4">
+                  <FooterLink label="Find Homes faster" href="#" />
                 </li>
               </ul>
             </div>
