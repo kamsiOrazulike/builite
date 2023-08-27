@@ -11,7 +11,7 @@ export const NavLink: React.FC<NavbarLinkProps> = ({ href, label, icon }) => {
   return (
     <Link
       href={href}
-      className={`my-3 block ${
+      className={`my-3 block h-8 ${
         isActive ? "text-blue-500" : "text-blue-900"
       } hover:text-blue-500 hover:border-b hover:border-blue-500 transition-all duration-150`}
     >

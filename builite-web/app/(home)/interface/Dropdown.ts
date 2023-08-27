@@ -1,9 +1,8 @@
 export interface Option {
   id: number;
-  icon?: any;
   label?: string;
   href?: string;
-  modal?: any;
+  hasModal?: any;
   action?: any;
 }
 

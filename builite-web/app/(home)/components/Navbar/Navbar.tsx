@@ -11,29 +11,16 @@ export default function Navbar() {
   const navOptions = [
     {
       id: 1,
-      label: "Option 1",
-      icon: <FaTable />,
+      label: "Building materials",
       action: () => {
-        // Handle option 1 click
-        console.log("Option 1 clicked");
+        console.log("building materials clicked");
       },
     },
     {
       id: 2,
-      label: "Option 2",
-      icon: <FaTv />,
+      label: "Find a contractor",
       action: () => {
-        // Handle option 2 click
-        console.log("Option 2 clicked");
-      },
-    },
-    {
-      id: 3,
-      label: "Option 3",
-      icon: <FaUsers />,
-      action: () => {
-        // Handle option 3 click
-        console.log("Option 3 clicked");
+        console.log("Find a contractor clicked");
       },
     },
   ];
@@ -43,36 +30,36 @@ export default function Navbar() {
   };
 
   return (
-    <div className="z-50 flex fixed w-screen justify-between items-center h-28 max-w-[1840px] mx-auto px-4 text-blue-900 bg-white shadow-md">
+    <div className="z-50 flex fixed w-screen justify-between items-center h-auto max-w-[1840px] mx-auto px-4 py-4 text-blue-900 bg-white shadow-md">
       <div className="w-full flex flex-row justify-between items-center align-middle">
-        <ul className="hidden md:flex">
-          <li className="p-2 m-2">
+        <ul className="hidden md:flex align-middle">
+          <li className="mx-2 px-2">
             <NavLink label="Buy" href={"#"} />
           </li>
-          <li className="p-2 m-2">
+          <li className="mx-2 px-2">
             <NavLink label="Sell" href={"#"} />
           </li>
-          <li className="p-2 m-2">
+          <li className="mx-2 px-2">
             <NavLink label="Rent" href={"#"} />
           </li>
-          <li className="p-2 m-2">
+          <li className="mx-2 px-2">
             <NavDropdown label="Build" options={navOptions} />
           </li>
-          <li className="p-2 m-2">
+          <li className="mx-2 px-2">
             <NavLink label="Agent Finder" href={"#"} />
           </li>
         </ul>
-        <div>
-          <img src={"./assets/imgs/logolight.svg"} className={"w-40"} />
+        <div className={"w-[80px]"}>
+          <img src={"./assets/imgs/logolight.svg"} />
         </div>
-        <ul className="hidden md:flex">
-          <li className="p-2 m-2">
+        <ul className="hidden md:flex align-middle">
+          <li className="mx-2 px-2">
             <NavLink label="Manage Rentals" href={"#"} />
           </li>
-          <li className="p-2 m-2">
+          <li className="mx-2 px-2">
             <NavLink label="About Us" href={"#"} />
           </li>
-          <li className="p-2 m-2">
+          <li className="mx-2 px-2">
             <NavButton label="Sign in" href={"#"} icon={<FaUserCircle />} />
           </li>
         </ul>

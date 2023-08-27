@@ -42,7 +42,7 @@ export const NavDropdown: React.FC<DropdownMenuProps> = ({
       <div
         tabIndex={0}
         role="button"
-        className="my-3 block justify-center w-full text-md font-medium cursor-pointer hover:text-blue-500 hover:border-b hover:border-blue-500 transition-all duration-150"
+        className="my-3 h-8 block justify-center w-full text-md font-medium cursor-pointer hover:text-blue-500 hover:border-b hover:border-blue-500 transition-all duration-150"
         onClick={handleDropdownToggle}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
@@ -53,7 +53,7 @@ export const NavDropdown: React.FC<DropdownMenuProps> = ({
         {label}
       </div>
       {isOpen && (
-        <div className="absolute w-40 z-40 py-2 mx-auto flex flex-col justify-center items-center shadow-md rounded-md bg-white">
+        <div className="absolute w-40 z-40 mx-auto flex flex-col justify-start items-center">
           {options.map((option: Option) => (
             <div
               key={option.id}
@@ -65,12 +65,9 @@ export const NavDropdown: React.FC<DropdownMenuProps> = ({
                   handleOptionClick(option);
                 }
               }}
-              className="w-full px-6 py-2 text-sm text-gray-800 border-b border-gray-200 hover:text-blue-500 transition-all duration-200 cursor-pointer"
+              className="w-full px-2 py-2 my-1 text-sm text-gray-800 bg-gray-100 border border-gray-200 rounded-full hover:scale-105 transition-all duration-200 cursor-pointer"
             >
-              <div className="w-full my-1 flex flex-row items-center">
-                <div className="mx-2">{option.icon}</div>
-                {option.label}
-              </div>
+              <div className="mx-1">{option.label}</div>
             </div>
           ))}
         </div>
