@@ -8,6 +8,7 @@ export interface Option {
 
 export interface DropdownMenuProps {
   label: string;
+  href?: string;
   options: Option[];
   buttonSpan?: any;
 }

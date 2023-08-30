@@ -1,7 +1,31 @@
 import React from "react";
 
 const AboutPage = () => {
-  return <div>About Page</div>;
+  return (
+    <>
+      <div className="text-gray-900 bg-gray-200">
+        <div className="w-full py-4">
+          <div className="px-8 relative">
+            <div className="w-full h-80 relative">
+              <div className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-40 rounded-lg" />
+              <img
+                src={"./assets/imgs/placeImage.jpg"}
+                className="w-full h-full object-cover rounded-lg mx-auto"
+              />
+              <div className="text-center absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center">
+                <h1 className="text-4xl font-bold text-white">
+                  About Builite Limited
+                </h1>
+                <p className="text-xl text-white uppercase">
+                  Your one-stop solution for all things property in Nigeria
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default AboutPage;

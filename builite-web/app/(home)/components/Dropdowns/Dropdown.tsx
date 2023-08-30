@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 export const NavDropdown: React.FC<DropdownMenuProps> = ({
   options,
+  href,
   label,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,11 +56,13 @@ export const NavDropdown: React.FC<DropdownMenuProps> = ({
       {isOpen && (
         <div className="absolute w-40 z-40 mx-auto flex flex-col justify-start items-center">
           {options.map((option: Option) => (
-            <div
+            <a
               key={option.id}
               tabIndex={0}
-              role="button"
-              onClick={() => handleOptionClick(option)}
+              href={option.href}
+              onClick={() => {
+                handleOptionClick(option);
+              }}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
                   handleOptionClick(option);
@@ -67,8 +70,8 @@ export const NavDropdown: React.FC<DropdownMenuProps> = ({
               }}
               className="w-full px-2 py-2 my-1 text-sm text-gray-800 bg-gray-100 border border-gray-200 rounded-full hover:scale-105 transition-all duration-200 cursor-pointer"
             >
-              <div className="mx-1">{option.label}</div>
-            </div>
+              <span className="mx-1">{option.label}</span>
+            </a>
           ))}
         </div>
       )}
